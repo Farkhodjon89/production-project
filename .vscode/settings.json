@@ -1,4 +1,7 @@
 {
   "i18n-ally.localesPaths": ["public/locales", "src/shared/config/i18n"],
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "css.validate": false,
+  "scss.validate": false,
+  "stylelint.validate": ["css", "scss"]
 }
