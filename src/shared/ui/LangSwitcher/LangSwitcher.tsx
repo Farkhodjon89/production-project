@@ -3,7 +3,7 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import { Button, ThemeButton } from '../Button/Button'
 
 interface LangSwitcherProps {
-  className?: string
+  className: string
 }
 
 export const LangSwitcher = ({ className = '' }: LangSwitcherProps) => {
