@@ -32,6 +32,7 @@ module.exports = {
     '@typescript-eslint/comma-dangle': ['error', 'only-multiline'],
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
+    'import/no-duplicates': 'off',
     'no-unused-vars': 'warn',
     'react/react-in-jsx-scope': 'off',
     'react/require-default-props': 'off',
