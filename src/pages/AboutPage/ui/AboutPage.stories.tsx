@@ -16,7 +16,9 @@ export default {
   },
 } as ComponentMeta<typeof AboutPage>
 
-const Template: ComponentStory<typeof AboutPage> = (args) => (
+type AllProps = Record<string, any>
+
+const Template: ComponentStory<typeof AboutPage> = (args: AllProps) => (
   <AboutPage {...args} />
 )
 
