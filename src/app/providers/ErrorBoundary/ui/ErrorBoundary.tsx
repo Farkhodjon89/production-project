@@ -1,4 +1,4 @@
-import { ErrorInfo, ReactNode, Suspense } from 'react'
+import { type ErrorInfo, type ReactNode, Suspense } from 'react'
 import { Component } from 'react'
 import { PageError } from 'widgets/PageError/ui/PageError'
 
