@@ -24,7 +24,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react'],
+  plugins: ['react', '@typescript-eslint', 'react-hooks'],
   rules: {
     'react/jsx-indent': [2, 2],
     'react/jsx-filename-extension': [
@@ -49,10 +49,13 @@ module.exports = {
     '@typescript-eslint/no-floating-promises': 'warn',
     '@typescript-eslint/ban-ts-comment': 'off',
     '@typescript-eslint/no-misused-promises': 'warn',
+    '@typescript-eslint/no-confusing-void-expression': 'warn',
     '@typescript-eslint/strict-boolean-expressions': 'warn',
     '@typescript-eslint/consistent-type-imports': 'warn',
     '@typescript-eslint/consistent-type-assertions': 'warn',
     'no-underscore-dangle': 'off',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error',
   },
   globals: {
     __IS_DEV__: true,
