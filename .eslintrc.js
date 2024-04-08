@@ -52,6 +52,7 @@ module.exports = {
     '@typescript-eslint/no-confusing-void-expression': 'warn',
     '@typescript-eslint/strict-boolean-expressions': 'warn',
     '@typescript-eslint/consistent-type-imports': 'warn',
+    '@typescript-eslint/consistent-type-exports': 'warn',
     '@typescript-eslint/consistent-type-assertions': 'warn',
     'no-underscore-dangle': 'off',
     'react-hooks/rules-of-hooks': 'error',
