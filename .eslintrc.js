@@ -54,6 +54,7 @@ module.exports = {
     '@typescript-eslint/consistent-type-imports': 'warn',
     '@typescript-eslint/consistent-type-exports': 'warn',
     '@typescript-eslint/consistent-type-assertions': 'warn',
+    '@typescript-eslint/prefer-nullish-coalescing': 'warn',
     'no-underscore-dangle': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
