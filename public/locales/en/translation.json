@@ -8,6 +8,8 @@
   "Обновить страницу": "Reload Page",
   "Короткий язык": "En",
   "Войти": "Login",
+  "Введите email": "Enter email",
+  "Введите пароль": "Enter password",
   "increment": "increment",
   "decrement": "decrement"
 }
