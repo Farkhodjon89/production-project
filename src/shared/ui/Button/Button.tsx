@@ -1,5 +1,5 @@
 import { type ButtonHTMLAttributes, type FC } from 'react'
-import { classNames } from 'shared/lib/classNames/classNames'
+import { Mods, classNames } from 'shared/lib/classNames/classNames'
 import cls from './Button.module.scss'
 import React from 'react'
 
@@ -22,6 +22,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   theme?: ThemeButton
   square?: boolean
   size?: ButtonSize
+  disabled?: boolean
 }
 
 export const Button: FC<ButtonProps> = (props) => {
@@ -31,17 +32,20 @@ export const Button: FC<ButtonProps> = (props) => {
     square,
     size = ButtonSize.M,
     children,
+    disabled,
     ...otherProps
   } = props
+
+  const mods: Mods = {
+    [cls.square]: square,
+    [cls.disabled]: disabled,
+  }
 
   return (
     <button
       type="button"
-      className={classNames(cls.Button, { [cls.square]: square }, [
-        className,
-        cls[theme],
-        cls[size],
-      ])}
+      disabled={disabled}
+      className={classNames(cls.Button, mods, [className, cls[theme], cls[size]])}
       {...otherProps}
     >
       {children}

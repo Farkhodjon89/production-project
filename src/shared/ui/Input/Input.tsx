@@ -62,10 +62,10 @@ export const Input: FC<InputProps> = memo((props) => {
       {placeholder && <div className={cls.placeholder}>{`${placeholder}>`}</div>}
       <div className={cls.caretWrapper}>
         <input
+          ref={ref}
           onBlur={onBlur}
           onFocus={onFocus}
           onSelect={onSelect}
-          ref={ref}
           onChange={onChangeHandler}
           type={type}
           value={value}

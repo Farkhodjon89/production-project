@@ -8,8 +8,11 @@
   "Обновить страницу": "Reload Page",
   "Короткий язык": "En",
   "Войти": "Login",
+  "Выйти": "Logout",
   "Введите email": "Enter email",
   "Введите пароль": "Enter password",
   "increment": "increment",
-  "decrement": "decrement"
+  "decrement": "decrement",
+  "Форма авторизации": "Authorization Form",
+  "Вы ввели неверный логин или пароль": "You entered an incorrect username or password"
 }
