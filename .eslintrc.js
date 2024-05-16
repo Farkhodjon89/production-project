@@ -50,6 +50,7 @@ module.exports = {
     '@typescript-eslint/ban-ts-comment': 'off',
     '@typescript-eslint/no-misused-promises': 'warn',
     '@typescript-eslint/no-confusing-void-expression': 'off',
+    '@typescript-eslint/no-dynamic-delete': 'off',
     '@typescript-eslint/strict-boolean-expressions': 'warn',
     '@typescript-eslint/consistent-type-imports': 'warn',
     '@typescript-eslint/consistent-type-exports': 'warn',

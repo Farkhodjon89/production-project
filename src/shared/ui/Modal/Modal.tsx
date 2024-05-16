@@ -6,7 +6,7 @@ import { useTheme } from 'app/providers/ThemeProvider'
 
 interface ModalProps {
   className?: string
-  children?: React.ReactNode
+  children: React.ReactNode
   isOpen?: boolean
   onClose?: () => void
   lazy?: boolean

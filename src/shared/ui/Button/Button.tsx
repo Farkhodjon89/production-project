@@ -1,4 +1,4 @@
-import { type ButtonHTMLAttributes, type FC } from 'react'
+import { type ButtonHTMLAttributes } from 'react'
 import { Mods, classNames } from 'shared/lib/classNames/classNames'
 import cls from './Button.module.scss'
 import React from 'react'
@@ -25,7 +25,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   disabled?: boolean
 }
 
-export const Button: FC<ButtonProps> = (props) => {
+export const Button = (props: ButtonProps) => {
   const {
     className = '',
     theme = '',

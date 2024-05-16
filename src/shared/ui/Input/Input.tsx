@@ -1,11 +1,4 @@
-import {
-  type InputHTMLAttributes,
-  type FC,
-  memo,
-  useState,
-  useRef,
-  useEffect,
-} from 'react'
+import { type InputHTMLAttributes, memo, useState, useRef, useEffect } from 'react'
 import React from 'react'
 import cls from './Input.module.scss'
 import { classNames } from 'shared/lib/classNames/classNames'
@@ -21,7 +14,7 @@ interface InputProps extends HTMLInputProps {
   placeholder?: string
 }
 
-export const Input: FC<InputProps> = memo((props) => {
+export const Input = memo((props: InputProps) => {
   const {
     className = '',
     value,
