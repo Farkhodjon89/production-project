@@ -4,7 +4,7 @@ import { Button, ThemeButton } from 'shared/ui/Button/Button'
 import { useTranslation } from 'react-i18next'
 import { Input } from 'shared/ui/Input/Input'
 import { memo, useCallback } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername'
 import { Text, TextTheme } from 'shared/ui/Text/Text'
 import { loginActions, loginReducer } from '../../model/slice/loginSlice'
@@ -16,6 +16,7 @@ import {
   DynamicModuleLoader,
   ReducersList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 
 export interface LoginFormProps {
   className?: string
@@ -27,7 +28,7 @@ const initialReducers: ReducersList = {
 
 const LoginForm = memo(({ className = '' }: LoginFormProps) => {
   const { t } = useTranslation()
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
 
   const username = useSelector(getLoginUsername)
   const password = useSelector(getLoginPassword)

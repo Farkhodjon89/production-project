@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './Navbar.module.scss'
-import { useCallback, useState } from 'react'
+import { memo, useCallback, useState } from 'react'
 import { Button, ThemeButton } from 'shared/ui/Button/Button'
 import { useTranslation } from 'react-i18next'
 import { LoginModal } from 'features/AuthByUsername'
@@ -11,7 +11,7 @@ interface NavbarProps {
   className?: string
 }
 
-export const Navbar = ({ className = '' }: NavbarProps) => {
+export const Navbar = memo(({ className = '' }: NavbarProps) => {
   const [isAuthModal, setIsAuthModal] = useState(false)
   const authData = useSelector(getUserAuthData)
   const dispatch = useDispatch()
@@ -46,7 +46,6 @@ export const Navbar = ({ className = '' }: NavbarProps) => {
 
   return (
     <div className={classNames(cls.Navbar, {}, [className])}>
-      {/* <div className={cls.links}> */}
       <Button
         className={cls.links}
         theme={ThemeButton.CLEAR_INVERTED}
@@ -54,8 +53,7 @@ export const Navbar = ({ className = '' }: NavbarProps) => {
       >
         {t('Войти')}
       </Button>
-      {/* </div> */}
       {isAuthModal && <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />}
     </div>
   )
-}
+})
